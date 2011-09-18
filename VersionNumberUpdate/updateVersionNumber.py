@@ -6,5 +6,4 @@ import sys
 
 print 'test'
 for file in sys.argv[1:]:
-	print file
-
+	print file,
