@@ -4,6 +4,7 @@
 
 import sys
 
-print 'test'
-for file in sys.argv[1:]:
-	print file,
+if __name__ == "__main__":
+    print 'test'
+    for file in sys.argv[1:]:
+        print file,
