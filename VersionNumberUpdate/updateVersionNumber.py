@@ -12,5 +12,6 @@ if __name__ == "__main__":
     parser.add_option("-v", "--version", dest="version", type="int", metavar="FIELD", help="Increment version number FIELD")
     (options, args) = parser.parse_args()
     print "Version = " + str(options.version)
+    if (len(args) == 0): parser.error("Incorrect number of arguments (need at least one)")
     for file in args:
         print file,
