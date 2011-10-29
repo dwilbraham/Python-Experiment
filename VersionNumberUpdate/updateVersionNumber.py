@@ -9,6 +9,8 @@ from optparse import OptionParser
 def incrementVersionNumber( version, fieldToInc ):
     fields = version.split('.')
     fields[fieldToInc-1] = str( int( fields[fieldToInc-1] ) + 1 )
+    for field in range(fieldToInc,len(fields)):
+        fields[field] = '0'
     return ".".join(fields)
 
 def processFile( file, version, release ):
